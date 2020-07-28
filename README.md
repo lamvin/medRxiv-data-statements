@@ -40,7 +40,7 @@ We then assign each of those categories to the following hierarchy to deal with 
 4.	Publicly available
 5.	Not applicable
 6.	Within manuscript
-7.	Within manuscript
+7.	Available
 
 We developed this hierarchy to disambiguate the statements that belong to more than one category. For instance, the statement *“data are available on request”* would be categorised as both **available** and **conditional availability** based on the previous regular expression, but the presence of the word *request* indicates that this statement should be categorised as **conditional availability**.
 
