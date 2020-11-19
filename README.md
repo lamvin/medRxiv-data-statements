@@ -24,13 +24,13 @@ This regular expression query allowed for variations in form and spelling of the
 
 We then ran another set of regular expression queries to classify the data statements of each manuscript. We first parsed the statement in sentences, and categorized each sentence as referring to the *code*, the *data* or both based on the presence of each of those words. We then ran the following regular expression queries to classify the content of each sentence. The following lists the categories and their respective queries:
 
--	**Available**: (is|are) available
--	**Publicly available**: (are|were|is) collected|\bpublic(ly)?\b|open.?source|available.?online|    public source
--	**Within manuscript**: supplement|(included|available) (with)?in\s([a-zA-Z]*\s){0,1}(main text|article|manuscript)
--	**Available later**: will be(\b.*\b)?available
--	**Conditional availability**: request|upon|author|on demand
+-	**Available**: (is|are)\s(available|archived)|all (data|code) (are|is )?(fully )?(available|included)
+-	**Publicly available**: (are|were|is) collected|\spublic(ly)?\s|open.?source|available.?online|public source
+-	**Within manuscript**: supplement|(with)?in\s([a-zA-Z]*\\s){0,2}(paper|main text|article|manuscript)
+-	**Available later**: \bwill\s
+-	**Conditional availability**: request|upon|author|on demand be(\b.*\b)?available|can be made available|with ([a-zA-Z]*\s){0,2}author|as necessary
 -	**Hyperlink**: https
--	**Not available**: \b(no|not|none).*(available|online|share)
+-	**Not available**: \b(no|not|none).*(available|online|share)|remains property
 -	**Not applicable**: not ap.?licable|\bn.?a\b|no\s([a-zA-Z]*\s){0,1}(data|code)\s([a-zA-Z]*\s){0,1}(use|referred)
 
 We then assign each of those categories to the following hierarchy to deal with the statements that are assigned to more than one of those categories:
